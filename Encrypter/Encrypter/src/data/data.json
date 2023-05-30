@@ -1,0 +1,12 @@
+{
+    "data": {
+        "encrypt": {
+            "value": "",
+            "placeholder": "type Smething here to encrypt"
+        },
+        "decrypt": {
+            "value": "",
+            "placeholder": "type Smething here to decrypt"
+        }
+    }
+}
