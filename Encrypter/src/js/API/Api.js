@@ -1,20 +1,13 @@
 class Api {
-    url;
-    data = {};
-    
-    constructor(url) {
-        this.url = url;
-        this.getData();
-    }
-
-    getData(){
-        fetch(this.url).then(
-            (reponse) => {
-                return reponse.json();
+    async getData(url) {
+        let dataToBeReturned = {};
+        await fetch(url).then(
+            (repsponse) => {
+                return repsponse.json();
             }
-        ).then( (data) => {
-            this.data = data;
+        ).then((data) => {
+            dataToBeReturned = data.data;
         })
-        console.log(this.data);
+        return dataToBeReturned;
     }
 }
