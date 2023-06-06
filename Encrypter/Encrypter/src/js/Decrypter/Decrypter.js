@@ -1,12 +1,13 @@
 class Decrypter {
 
-    decrypt(stringToDecrypt) {
+    decrypt(stringToDecrypt) { // Definieert een methode genaamd "decrypt" met een parameter "stringToDecrypt".
         stringToDecrypt = stringToDecrypt.toUpperCase();
         let decryptedString = [];
         for (let i = 0; i < stringToDecrypt.length; i++) {
             switch (stringToDecrypt[i]) {
                 case "D":
-                    decryptedString.push("A");
+                    decryptedString.push("A");  // Voegt "A" toe aan de array als het teken "D" is.
+                    break;
                     break;
                 case "E":
                     decryptedString.push("B");
@@ -85,11 +86,10 @@ class Decrypter {
                     break;
 
                 default:
-                    decryptedString.push(stringToDecrypt[i]);
+                    decryptedString.push(stringToDecrypt[i]);  // Voegt het teken ongewijzigd toe aan de array als er geen overeenkomst is met de cases.
             }
         }
         decryptedString = decryptedString.join("");
-        return decryptedString;
-
+        return decryptedString;  // Geeft de gedecodeerde string terug als het resultaat van de functie.
     }
 }
